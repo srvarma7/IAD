@@ -23,6 +23,8 @@
                 <ul class="nav navbar-nav">
 
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("PDF", "GeneratePDF", "Home")</li>
+              
                     @if (User.Identity.IsAuthenticated)
                     {
                         //ADMIN MENUS

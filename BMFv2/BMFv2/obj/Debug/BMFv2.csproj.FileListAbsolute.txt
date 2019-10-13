@@ -238,3 +238,5 @@ C:\Users\Raghu\Desktop\BMF\IAD\BMFv2\BMFv2\obj\Debug\BMFv2.csproj.CopyComplete
 C:\Users\Raghu\Desktop\BMF\IAD\BMFv2\BMFv2\obj\Debug\BMFv2.dll
 C:\Users\Raghu\Desktop\BMF\IAD\BMFv2\BMFv2\obj\Debug\BMFv2.pdb
 C:\Users\Raghu\Desktop\BMF\IAD\BMFv2\BMFv2\obj\Debug\BMFv2.csprojAssemblyReference.cache
+C:\Users\Raghu\Desktop\BMF\IAD\BMFv2\BMFv2\bin\IronPdf.dll
+C:\Users\Raghu\Desktop\BMF\IAD\BMFv2\BMFv2\bin\IronPdf.xml
