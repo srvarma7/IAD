@@ -228,6 +228,7 @@
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SendEmailWithFileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,9 +237,11 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SendEmailViewModel.cs" />
+    <Compile Include="Models\SendEmailWithFileViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\EmailSender.cs" />
+    <Compile Include="Utils\EmailSenderWithFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-BMFv2-20190925040708.mdf" />
@@ -304,6 +307,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Email\Send_Email.cshtml" />
     <Content Include="Views\Home\OnlineUsers.cshtml" />
+    <Content Include="Views\SendEmailWithFile\Send.cshtml" />
+    <Content Include="Views\SendEmailWithFile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
