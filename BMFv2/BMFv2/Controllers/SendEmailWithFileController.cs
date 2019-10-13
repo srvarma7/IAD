@@ -20,9 +20,8 @@ namespace BMFv2.Controllers
             return View();
         }
         
-
+        //Lecture Slides
         [HttpPost]
-        //[ValidateAntiForgeryToken]
         public async Task<ActionResult> Send(SendEmailWithFileViewModel model)
         {
             if (ModelState.IsValid)
