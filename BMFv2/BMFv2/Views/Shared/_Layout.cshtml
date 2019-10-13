@@ -22,42 +22,55 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("PDF", "GeneratePDF", "Home")</li>
-              
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        //ADMIN MENUS
-                        if (User.IsInRole("Admin"))
+                    <!--
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        -->
+
+                    <li>@Html.ActionLink("Send Email with attachment", "Index", "SendEmailWithFile")</li>
+                    <li>@Html.ActionLink("Generate invoice PDF from URL", "GeneratePDF", "Home")</li>
+
+
+                    <!--
+
+                        @if (User.Identity.IsAuthenticated)
                         {
-                            <li>@Html.ActionLink("Admin menu Send Email", "Send_Email", "Email")</li>
-                            <li>
-                                <a href="">Manage</a>
-                                <ul class="dropdown">
-                                    <li>@Html.ActionLink("Manage Users", "Index", "AspNetUsers")</li>
-                                    <li>@Html.ActionLink("Manage Flights", "Index", "Flights")</li>
-                                    <li>@Html.ActionLink("Manage Bookings", "Index", "Bookings")</li>
-                                </ul>
-                            </li>
+                            //ADMIN MENUS
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li>@Html.ActionLink("Admin menu Send Email", "Send_Email", "Email")</li>
+                                <li>
+                                    <a href="">Manage</a>
+                                    <ul class="dropdown">
+                                        <li>@Html.ActionLink("Manage Users", "Index", "AspNetUsers")</li>
+                                        <li>@Html.ActionLink("Manage Flights", "Index", "Flights")</li>
+                                        <li>@Html.ActionLink("Manage Bookings", "Index", "Bookings")</li>
+                                    </ul>
+                                </li>
+                            }
+                            //LOGGED-IN USER MENU
+                            else
+                            {
+                                <li>@Html.ActionLink("My bookings", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Offers", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                            }
                         }
-                        //LOGGED-IN USER MENU
                         else
                         {
-                            <li>@Html.ActionLink("My bookings", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("Offers", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            //GENERAL USER MENU
                             <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         }
-                    }
-                    else
-                    {
-                        //GENERAL USER MENU
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    }
+
+
+        -->
+
+
 
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <!--@Html.Partial("_LoginPartial")-->
+
             </div>
         </div>
     </div>
