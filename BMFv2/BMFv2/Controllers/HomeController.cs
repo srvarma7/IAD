@@ -45,19 +45,34 @@ namespace BMFv2.Controllers
         {
             return View();
         }
+
+        public ActionResult PDFGenF()
+        {
+            return View();
+        }
+
         public ActionResult GeneratePDF()
         {
             //var PDF = Renderer.RenderHTMLFileAsPdf("https://localhost:44335/Home/About.cshtml");
             //var PDF = Renderer.RenderHTMLFileAsPdf("C:/Users/Raghu/Desktop/BMF/IAD/BMFv2/BMFv2/Views/Home/Index.cshtml");
+            try
+            {
+                var Renderer = new IronPdf.HtmlToPdf();
+                var PDF = Renderer.RenderUrlAsPdf("https://localhost:44335/Home/invoice");
 
-            var Renderer = new IronPdf.HtmlToPdf();
-            var PDF = Renderer.RenderUrlAsPdf("https://localhost:44335/Home/invoice");
-            
-            //CHANGE THE FILE PATH TO GENERATE PDF
-            var OutputPath = "C:/Users/Raghu/Desktop/Home.pdf";
-            PDF.SaveAs(OutputPath);
-            ViewBag.Message = "PDF generated Successfully";
-            return RedirectToAction("PDFGenS");
+                //CHANGE THE FILE PATH TO GENERATE PDF
+                //Setting the path location to store the pdf
+                var OutputPath = "C:/Users/Raghu/Desktop/Invoice.pdf";
+                PDF.SaveAs(OutputPath);
+                ViewBag.Message = "PDF generated Successfully";
+                return RedirectToAction("PDFGenS");
+            }
+            catch
+            {
+
+            }
+
+            return RedirectToAction("PDFGenF");
         }
     }
 }
