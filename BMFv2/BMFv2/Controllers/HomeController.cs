@@ -40,17 +40,24 @@ namespace BMFv2.Controllers
         {
             return View();
         }
+
+        public ActionResult PDFGenS()
+        {
+            return View();
+        }
         public ActionResult GeneratePDF()
         {
-            var Renderer = new IronPdf.HtmlToPdf();
             //var PDF = Renderer.RenderHTMLFileAsPdf("https://localhost:44335/Home/About.cshtml");
-            var PDF = Renderer.RenderUrlAsPdf("https://localhost:44335/Home/invoice");
             //var PDF = Renderer.RenderHTMLFileAsPdf("C:/Users/Raghu/Desktop/BMF/IAD/BMFv2/BMFv2/Views/Home/Index.cshtml");
+
+            var Renderer = new IronPdf.HtmlToPdf();
+            var PDF = Renderer.RenderUrlAsPdf("https://localhost:44335/Home/invoice");
+            
+            //CHANGE THE FILE PATH TO GENERATE PDF
             var OutputPath = "C:/Users/Raghu/Desktop/Home.pdf";
             PDF.SaveAs(OutputPath);
-
-            return RedirectToAction("Index");
-            //return View();
+            ViewBag.Message = "PDF generated Successfully";
+            return RedirectToAction("PDFGenS");
         }
     }
 }

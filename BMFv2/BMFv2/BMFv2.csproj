@@ -314,6 +314,7 @@
     <Content Include="Views\Home\OnlineUsers.cshtml" />
     <Content Include="Views\SendEmailWithFile\Send.cshtml" />
     <Content Include="Views\SendEmailWithFile\Index.cshtml" />
+    <Content Include="Views\Home\PDFGenS.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
